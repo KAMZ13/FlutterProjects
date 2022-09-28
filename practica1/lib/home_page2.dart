@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 
 class HomePage2 extends StatelessWidget {
-  const HomePage2({
+  HomePage2({
     Key? key,
   }) : super(key: key);
 
@@ -10,12 +10,12 @@ class HomePage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MusicFindApp'),
+        title: Text('MusicFindApp'),
       ),
       body: Center(
         child: Column(children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -30,7 +30,7 @@ class HomePage2 extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 150, horizontal: 50),
+            padding: EdgeInsets.symmetric(vertical: 150, horizontal: 50),
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               AvatarGlow(
                 endRadius: 90.0,
