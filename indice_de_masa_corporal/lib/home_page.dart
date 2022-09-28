@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
 
   void _showResults() {
     showDialog(
-        context: this.context,
+        context: context,
         builder: (context) {
           return AlertDialog(
             title: Text("Tu IMC: ${_imc().toStringAsFixed(2)}"),
