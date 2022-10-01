@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
+import 'package:practica1/favorites.dart';
 
 class HomePage2 extends StatelessWidget {
   HomePage2({
@@ -55,24 +56,30 @@ class HomePage2 extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              AvatarGlow(
-                endRadius: 20.0,
-                glowColor: Colors.cyan,
-                repeat: true,
-                showTwoGlows: true,
-                child: Material(
-                  elevation: 20.0,
-                  shape: CircleBorder(),
-                  child: CircleAvatar(
-                    backgroundColor: Color.fromARGB(31, 34, 32, 32),
-                    child: Image.asset(
-                      'assets/love.png',
-                      height: 1000,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacement(
+                      context, MaterialPageRoute(builder: (_) => Favorites()));
+                },
+                child: AvatarGlow(
+                  endRadius: 20.0,
+                  glowColor: Colors.cyan,
+                  repeat: true,
+                  showTwoGlows: true,
+                  child: Material(
+                    elevation: 20.0,
+                    shape: CircleBorder(),
+                    child: CircleAvatar(
+                      backgroundColor: Color.fromARGB(31, 34, 32, 32),
+                      child: Image.asset(
+                        'assets/love.png',
+                        height: 1000,
+                      ),
+                      radius: 90,
                     ),
-                    radius: 90,
                   ),
                 ),
-              ),
+              )
             ],
           )
         ]),
