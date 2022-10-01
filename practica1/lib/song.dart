@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:practica1/favorites.dart';
 
 class Song extends StatelessWidget {
   Song({super.key});
@@ -9,86 +10,91 @@ class Song extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Here´s the Beat",
-            style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w900,
-                color: Colors.deepPurple[300]),
-          ),
+      appBar: AppBar(
+        title: Text(
+          "Here´s the Beat",
+          style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w900,
+              color: Colors.deepPurple[300]),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10),
-          child: Column(
-            children: [
-              Container(
-                alignment: Alignment.bottomCenter,
-                decoration: BoxDecoration(color: Colors.deepPurple[300]),
-                child: Container(
-                    child: Column(
-                  children: [
-                    Image.asset(
-                      'assets/ff.png',
-                      width: 380,
-                      fit: BoxFit.cover,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.bottomCenter,
+              decoration: BoxDecoration(color: Colors.deepPurple[300]),
+              child: Container(
+                  child: Column(
+                children: [
+                  Image.asset(
+                    'assets/ff.png',
+                    width: 380,
+                    fit: BoxFit.cover,
+                  ),
+                ],
+              )),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 150, top: 50, bottom: 10),
+              child: Row(
+                children: [
+                  Text(
+                    "Everlong",
+                    style: TextStyle(
+                      color: Colors.deepPurple[300],
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
                     ),
-                  ],
-                )),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 150, top: 50, bottom: 10),
-                child: Row(
-                  children: [
-                    Text(
-                      "Everlong",
-                      style: TextStyle(
-                        color: Colors.deepPurple[300],
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 80, bottom: 10),
+              child: Row(
+                children: [
+                  Text(
+                    "The Colour and the Shape",
+                    style: TextStyle(
+                      color: Colors.deepPurple[300],
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                  ],
-                ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 80, bottom: 10),
-                child: Row(
-                  children: [
-                    Text(
-                      "The Colour and the Shape",
-                      style: TextStyle(
-                        color: Colors.deepPurple[300],
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 150, bottom: 20),
+              child: Row(
+                children: [
+                  Text(
+                    "Foo Fighters",
+                    style: TextStyle(
+                      color: Colors.deepPurple[300],
+                      fontSize: 17,
                     ),
-                  ],
-                ),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 150, bottom: 20),
-                child: Row(
-                  children: [
-                    Text(
-                      "Foo Fighters",
-                      style: TextStyle(
-                        color: Colors.deepPurple[300],
-                        fontSize: 17,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 90, top: 70),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 20),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 90, top: 70),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (_) => Favorites()));
+                      },
                       child: AvatarGlow(
                         endRadius: 30.0,
                         glowColor: Colors.lightBlue,
@@ -105,8 +111,14 @@ class Song extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 20),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (_) => Favorites()));
+                      },
                       child: AvatarGlow(
                         endRadius: 30.0,
                         glowColor: Colors.lightBlue,
@@ -126,7 +138,13 @@ class Song extends StatelessWidget {
                         ),
                       ),
                     ),
-                    AvatarGlow(
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (_) => Favorites()));
+                    },
+                    child: AvatarGlow(
                       endRadius: 30.0,
                       glowColor: Colors.lightBlue,
                       repeat: true,
@@ -144,11 +162,13 @@ class Song extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ));
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
