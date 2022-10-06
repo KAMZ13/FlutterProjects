@@ -36,10 +36,7 @@ class HomePage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(color: Color.fromARGB(255, 45, 67, 153)),
         child: Column(
-          children: [
-            _moviesArea(context),
-            ItemProduct(),
-          ],
+          children: [_moviesArea(context), ItemProduct(), _moviesList()],
         ),
       ),
     );
