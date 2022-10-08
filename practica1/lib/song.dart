@@ -92,10 +92,16 @@ class Song extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 20),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (_) => Favorites()));
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => Favorites(),
+                          ),
+                        );
                       },
                       child: AvatarGlow(
+                        //event: touch spotify to open song in spotify
+                        //state: redirect user to spotify
                         endRadius: 30.0,
                         glowColor: Colors.lightBlue,
                         repeat: true,
@@ -116,10 +122,15 @@ class Song extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 20),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (_) => Favorites()));
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => Favorites(),
+                          ),
+                        );
                       },
                       child: AvatarGlow(
+                        //event: touch icon to open song in AppleMusic
                         endRadius: 30.0,
                         glowColor: Colors.lightBlue,
                         repeat: true,
@@ -141,10 +152,15 @@ class Song extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
-                          MaterialPageRoute(builder: (_) => Favorites()));
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => Favorites(),
+                        ),
+                      );
                     },
                     child: AvatarGlow(
+                      //event: touch icon to open song in youtube
                       endRadius: 30.0,
                       glowColor: Colors.lightBlue,
                       repeat: true,

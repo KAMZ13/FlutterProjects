@@ -32,6 +32,8 @@ class Favorites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //event: when tapping image takes you to spotify
+      //favorites state: redirect user to spotify
       appBar: AppBar(
         title: Text("Favorites"),
       ),
