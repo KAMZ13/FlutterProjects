@@ -6,6 +6,7 @@ abstract class ShazamState extends Equatable {
   @override
   List<Object> get props => [];
 }
+
 //Favorites state: redirect user to spotify
 //Song state: redirect user to spotify
 //Song state: redirect user to AppleMusic
@@ -14,19 +15,29 @@ abstract class ShazamState extends Equatable {
 //HomePage state:POST de el snippet de cancion y busca mientras se muestra un loading
 //HomePage state: se encuentra la info de la cancion y se redirige al user a la pagina de detalles
 //HomePage state: No se encuentra la informacion de la cancion y se muestra un mensaje de error
+//HomePage state: Glow to true and redirect user to favorites
 
 class ShazamInitial extends ShazamState {}
 
-class ShazamRedirectSpotify extends ShazamState {}
+class ShazamRedirectSpotifyState extends ShazamState {
+  //declaro la variable del URL
+  //en el estado se manda cuando se emite.
+}
 
-class ShazamRedirectAppleMusic extends ShazamState {}
+class ShazamRedirectAppleMusicState extends ShazamState {}
 
-class ShazamRedirectYoutube extends ShazamState {}
+class ShazamRedirectYoutubeState extends ShazamState {}
 
-class ShazamRecord extends ShazamState {}
+class ShazamRecordState extends ShazamState {}
 
-class ShazamPost extends ShazamState {}
+class ShazamPostState extends ShazamState {}
 
-class ShazamInfoFound extends ShazamState {}
+class ShazamInfoFoundState extends ShazamState {
+  final Map<String, String> info;
 
-class ShazamInfoNotFound extends ShazamState {}
+  ShazamInfoFoundState(this.info);
+}
+
+class ShazamAddToFavoritesState extends ShazamState {}
+
+class ShazamGoToFavoritesState extends ShazamState {}
