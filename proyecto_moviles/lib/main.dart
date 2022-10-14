@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:proyecto_moviles/bloc/tutoapp_bloc.dart';
 import 'package:proyecto_moviles/pages/agenda.dart';
+import 'package:proyecto_moviles/pages/agendar_tutoria.dart';
 import 'package:proyecto_moviles/pages/homepage.dart';
 
 void main() =>
@@ -15,6 +16,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Tutoapp',
         theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.green)),
-        home: Agenda());
+        home: AgendarTutoria());
   }
 }

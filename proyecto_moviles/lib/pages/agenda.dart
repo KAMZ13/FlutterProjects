@@ -254,7 +254,7 @@ class Agenda extends StatelessWidget {
                           style: TextStyle(
                               fontFamily: 'Chewy-Regular',
                               fontSize: 24,
-                              color: Colors.lightBlue[600]),
+                              color: Colors.purple[600]),
                         ),
                       ),
                       Text(
