@@ -17,6 +17,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Tutoapp',
         theme: ThemeData(appBarTheme: AppBarTheme(color: Colors.green)),
-        home: TutoriasDisponibles());
+        home: HomePage());
   }
 }

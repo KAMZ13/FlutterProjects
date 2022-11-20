@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "810549562317",
+    "project_id": "clase-moviles-59a41",
+    "storage_bucket": "clase-moviles-59a41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810549562317:android:64d0abec4e9ab479c39284",
+        "android_client_info": {
+          "package_name": "com.example.entradas_iteso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810549562317-pvo6u2du5hps7tr1klfkk8v13d1buq3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq1R7AxzmnQwRPgC-7rrXqMsaoAsOqDXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "810549562317-pvo6u2du5hps7tr1klfkk8v13d1buq3o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
